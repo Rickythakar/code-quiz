@@ -1,3 +1,10 @@
-.flex-container {
-display: flex;
+/* Background color of webpage */
+body {
+    background-color: peachpuff;
+}
+
+.flex-container, button{
+    display: flex;
+    justify-content: center;
+
 }
