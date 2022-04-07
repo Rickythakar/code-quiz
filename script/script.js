@@ -1,15 +1,15 @@
 console.log ("javascript file is hooked up");
 
 // Declare and set variables for the sheet
-let timer
-let answer
-let button 
-let quizQuestion
+let timer = 5;
+let countdown;
+let thisQuestion = 0;
+// let quizQuestion //array
 
 
 // Create an array of possible choices and answers
 
-array [{
+let quizQuestions = [{
     question: "question 1",
     choices: ["answer1" , "answer2" , "answer3" , "answer4"],
     answer: "answer2"
@@ -41,7 +41,29 @@ array [{
 // 1 variable will be true - the false variable will remove time from the timer
 
 // Create function that connects to button
-function startquiz (event){ startTimer
+function startquiz (event){ 
+    //This is the function to start the timer of the game
+    countdown = setInterval(function () {
+        timer--;
+        document.querySelector(".timer").textContent = timer;
+        //query selector indicates its hooked up to html 
+        if (timer === 0) {
+            // created this if statement to stop timer at 0
+        clearInterval(countdown);
+        document.querySelector(".timer").textContent = "Game Over";
+        //if timer hits 0 text content will display game over
+        }
+    }, 1000);
+    //Hides start button after starting quiz
+    document.querySelector(".quiz").style.display = "none";
+    // show first question on the page
+    document.querySelector(".question").textContent = quizQuestions[thisQuestion].question;
+    document.querySelector(".answers").textContent = quizQuestions[thisQuestion].answers;
+    //loop over the answers 
+    //quizQuestions[thisQuestion].answers.length
+    //append each one to the answers div
+
+
 
 
 
@@ -50,6 +72,7 @@ function startquiz (event){ startTimer
 // draft of function
 // startBtn.answer function {
 //     start.timer 
+let startTimer 
 
 // }
 
