@@ -1,10 +1,10 @@
 console.log ("javascript file is hooked up");
 
 // Declare and set variables for the sheet
-var timer
-var answer
-var button 
-var quizQuestion
+let timer
+let answer
+let button 
+let quizQuestion
 
 
 // Create an array of possible choices and answers
@@ -41,11 +41,11 @@ array [{
 // 1 variable will be true - the false variable will remove time from the timer
 
 // Create function that connects to button
-function startquiz (event){ 
+function startquiz (event){ startTimer
 
 
 
-    
+
 }
 // draft of function
 // startBtn.answer function {
